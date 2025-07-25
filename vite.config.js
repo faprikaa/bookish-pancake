@@ -11,11 +11,15 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     tailwindcss(),
-
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      'vue': 'vue/dist/vue.esm-bundler.js'
     },
+    dedupe: ['vue']
   },
+  optimizeDeps: {
+    include: ['vue']
+  }
 })
