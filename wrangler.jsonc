@@ -1,5 +1,5 @@
 {
-  "name": "down-payment=calc",
+  "name": "down-payment-calc",
     "compatibility_flags": [
       "nodejs_compat"
     ],
